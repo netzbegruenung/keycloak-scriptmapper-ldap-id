@@ -1,7 +1,7 @@
 {
-    "oidc-mappers": [
+    "mappers": [
         {
-            "name": "LDAP_ID (ObjectGUID) uppercase mapper",
+            "name": "LDAP ID uppercase mapper",
             "fileName": "ldap-id-uppercase.js",
             "description": "Transform LDAP_ID user attribute to upper case"
         }

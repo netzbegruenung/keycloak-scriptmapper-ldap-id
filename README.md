@@ -4,7 +4,7 @@ When using LDAP for user federation in Keycloak, the ObjectGUID attribute is aut
 
 However, the UUID can be upper case in the LDAP directry, while Keycloak stores it lower case. When using LDAP for synchronizing users into applications and OIDC for authentication, some applications ([Nextcloud](https://github.com/nextcloud/user_saml/issues/563#issuecomment-1215519305)) case sensitive and can therefore not map the OIDC user to the LDAP user object.
 
-This OIDC script mapper transforms the LDAP_ID attribute into upper case.
+This OIDC protocol script mapper transforms the LDAP_ID attribute into upper case. For details, see the [Keycloak documentation](https://www.keycloak.org/docs/24.0.1/server_development/#_script_providers).
 
 # Install
 
