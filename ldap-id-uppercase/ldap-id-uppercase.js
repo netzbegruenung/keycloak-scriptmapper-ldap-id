@@ -1,9 +1,6 @@
 var ldap_id_uppercase = "";
-if ( user && user.getAttributeStream("LDAP_ID") ) {
-  ldap_id_uppercase = user.getAttributeStream("LDAP_ID").toUpperCase();
-  print("LDAP_ID: " + ldap_id_uppercase)
-} else {
-  print("LDAP_ID attribute does not exist")
-}
-
+user.getAttributeStream("LDAP_ID").forEach(function(ldap_id) {
+  ldap_id_uppercase = ldap_id.toUpperCase();
+  print("Upper Case LDAP_ID: " + ldap_id_uppercase)
+});
 exports = ldap_id_uppercase;
